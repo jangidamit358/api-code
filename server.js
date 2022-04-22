@@ -1,7 +1,7 @@
 const app=require("./src/index")
 const connect=require("./src/configs/db")
 
-app.listen(2000,async function(){
+app.listen(process.env.PORT || 2000,async function(){
     try{
         await connect();
         console.log("listening on port 2000")
